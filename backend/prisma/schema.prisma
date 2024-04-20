@@ -26,13 +26,13 @@ model Project {
   description String
   status      Status
   client      Client @relation(fields: [clientId], references: [id])
-  clientId    String @unique
+  clientId    String
 }
 
 model Client {
   id      String    @id @default(uuid())
   name    String
-  email   String
+  email   String    @unique
   phone   String
   Project Project[]
 }

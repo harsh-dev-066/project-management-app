@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import { createHandler } from "graphql-http/lib/use/express";
-import { buildSchema } from "graphql";
 import schema from "./schema/schema";
 const { ruruHTML } = require("ruru/server");
 
